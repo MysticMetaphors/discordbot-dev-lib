@@ -6,32 +6,44 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction) {
   const authorName = interaction.client.authorName || "Bot";
-  
-  const helpEmbed = new EmbedBuilder()
-    .setColor(0x0099FF)
-    .setTitle('Web Tools Bot Help')
-    .setDescription('Here are the available commands to help you test and preview websites.')
-    .setThumbnail(interaction.client.user.displayAvatarURL())
-    .addFields(
-      { 
-        name: '/audit', 
-        value: '> **Usage:** `/audit url:<link>`\n> Runs a full technical audit including Lighthouse scores (Performance & SEO), security headers (SSL, HSTS), and tech stack detection.' 
-      },
-      { 
-        name: '/preview', 
-        value: '> **Usage:** `/preview url:<link> device:<type>`\n> Takes a high-resolution screenshot of a site on a specific device (e.g., iPhone 14, Desktop, iPad).' 
-      },
-      {
-        name: '/map',
-        value: '> **Usage:** `/map url:<link>`\n> Visualize the website structure'
-      },
-      { 
-        name: '/help', 
-        value: '> Displays this message.' 
-      }
-    )
-    .setFooter({ text: `Maintained by: ${authorName}` })
-    .setTimestamp();
 
-  await interaction.reply({ embeds: [helpEmbed] });
+  const report = `
+\`\`\`ini
+MANUAL: HELP
+========================================
+[DESCRIPTION]
+Here are the available commands to help you test and preview websites.
+
+[COMMANDS]
+----------------------------------------
+[/audit]
+> Usage:   /audit url:<link>
+> Info:    Runs a full technical audit including Lighthouse scores, 
+           Security headers (SSL, HSTS), and Tech Stack detection.
+
+[/preview]
+> Usage:   /preview url:<link> device:<type>
+> Info:    Takes a high-res screenshot on specific devices (iPhone 14, 
+           Desktop, etc). Supports auto-scroll for animations.
+
+[/map]
+> Usage:   /map url:<link>
+> Info:    Crawls the website to visualize the link structure and
+           site hierarchy tree.
+
+[/crawl-check]
+> Usage:   /crawl-check url:<link> path:<path> bot:<type>
+> Info:    Simulates search engine bots (Googlebot, Bing) to check 
+           if a specific page path is blocked by robots.txt.
+
+[/help]
+> Usage:   /help
+> Info:    Displays this message.
+
+========================================
+Bot maintained by: ${authorName}
+\`\`\`
+    `;
+
+  await interaction.reply(report);
 }

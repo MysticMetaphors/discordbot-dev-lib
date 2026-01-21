@@ -91,6 +91,12 @@ Visualize the website structure
 /map url:<your-website-url>
 ```
 
+## 5. Crawl Check
+Simulate search engine access to any URL and detect blocked paths
+```bash
+/crawl-check url:<your-website-url> path:<choosen-pathl> bot:<choosen-bot>
+```
+
 
 
 
