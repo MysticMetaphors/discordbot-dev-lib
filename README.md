@@ -24,10 +24,12 @@ Each bot in this library is **standalone**. You don't need to install the whole 
   ```bash
   git clone [https://github.com/MysticMetaphors/discordbot-dev-lib.git](https://github.com/MysticMetaphors/discordbot-dev-lib.git)
   cd discordbot-dev-lib
+  ```
 
 2. **Pick Your Tool: Navigate to the folder of the bot you need**
   ```bash
   cd MysticMetaphors-bot
+  ```
 
 3. **Install & Deploy:** Follow the specific README.md inside that folder to set up your keys and run the bot.
 

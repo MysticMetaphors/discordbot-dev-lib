@@ -22,6 +22,7 @@ You need these installed on the machine running the bot:
   ```bash
   git clone [https://github.com/MysticMetaphors/discordbot-dev-lib.git](https://github.com/MysticMetaphors/discordbot-dev-lib.git)
   cd MysticMetaphors-bot
+  ```
 
 2. **Install Dependencies**
   ```bash
@@ -31,10 +32,12 @@ You need these installed on the machine running the bot:
   ```bash
   DISCORD_TOKEN=your_bot_token_here
   CLIENT_ID=your_application_id_here
+  ```
 
 4. **Start the Bot**
   ```bash
   npm index.js
+  ```
 
 ## Create the Bot (Discord Side)
 
