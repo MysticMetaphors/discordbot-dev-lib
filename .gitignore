@@ -1,0 +1,12 @@
+# Protect Secrets
+**/.env
+**/.chrome_session
+
+# Ignore Dependencies
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
